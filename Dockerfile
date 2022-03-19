@@ -13,6 +13,7 @@ RUN apt -y install libevent-dev libssl-dev zlib1g-dev build-essential git
 WORKDIR /tor/
 
 RUN git clone https://github.com/AaronDewes/tor-do-not-use .
+RUN ./autogen.sh
 RUN ./configure --sysconfdir=/etc --datadir=/var/lib
 RUN make -j$(nproc)
 RUN make install
