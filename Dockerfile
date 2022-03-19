@@ -8,7 +8,7 @@ FROM debian:11-slim as builder
 ARG VERSION
 
 RUN apt update
-RUN apt -y install libevent-dev libssl-dev zlib1g-dev build-essential git automake
+RUN apt -y install libevent-dev libssl-dev zlib1g-dev build-essential git automake asciidoc
 
 WORKDIR /tor/
 
